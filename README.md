@@ -25,7 +25,7 @@ Upload by url:
 
 Upload by path:
 
-    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload --image_url 'https://<image_url>/'
+    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload --image_path '/tmp/image.jpg'
     
 For more info use `--help`:
 
