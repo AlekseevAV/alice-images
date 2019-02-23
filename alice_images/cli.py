@@ -17,23 +17,16 @@ def cli(ctx, skill_id, oauth_token):
 
 
 @cli.command('upload')
-@click.option('--image-url', help='Image URL to upload.')
-@click.option('--image-path', help='Image PATH to upload.')
+@click.argument('image_path_or_url')
 @click.pass_context
-def upload_image(ctx, image_url, image_path):
-    kwargs = {
-        'skill_id': ctx.obj['skill_id'],
-        'oauth_token': ctx.obj['oauth_token']
-    }
-
-    if image_path:
-        kwargs['image_path'] = image_path
-    elif image_url:
-        kwargs['image_url'] = image_url
-    else:
-        raise click.BadParameter('Need to provide image_url or image_path')
-
-    click.echo(api.upload_image(**kwargs))
+def upload_image(ctx, image_path_or_url):
+    click.echo(
+        api.upload_image(
+            skill_id=ctx.obj['skill_id'],
+            oauth_token=ctx.obj['oauth_token'],
+            image_path_or_url=image_path_or_url
+        )
+    )
 
 
 @cli.command('list')

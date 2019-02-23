@@ -14,18 +14,18 @@ Work with alice skills images: upload|list|delete
     upload_image(
         skill_id='<skill_id>',
         oauth_token='<oauth_token>',
-        image_url='https://<image_url>/'  # or image_path='/tmp/image.jpg'
+        image='https://<image_url>/'  # or path '/tmp/image.jpg'
     )
     
 #### CLI
 
 Upload by url:
 
-    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload --image_url 'https://<image_url>/'
+    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload 'https://<image_url>/'
 
 Upload by path:
 
-    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload --image_path '/tmp/image.jpg'
+    alice_images --skill_id '<skill_id>' --oauth_token '<oauth_token>' upload '/tmp/image.jpg'
     
 For more info use `--help`:
 
