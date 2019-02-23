@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='alice-images',
-    version='0.0.1',
+    version='0.0.2',
     author='Aleksandr Alekseev',
     author_email='alekseevavx@gmail.com',
     description='Work with alice skills images: upload|list|delete',
